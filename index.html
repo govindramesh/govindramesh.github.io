@@ -6,8 +6,8 @@
         .title a {
             display: block;
             font-size:40px;
-            padding: 10px 0px 0px 10px;
-	    background-color: grey;
+            padding: 10px 0px 0px 100px;
+	          background-color: grey;
             color:black;
             font-weight:bold;
             text-align: left;
@@ -16,11 +16,12 @@
         .subtitle a {
             display: block;
             font-size:17px;
-	    padding: 0px 0px 10px 10px;
+	          padding: 0px 0px 10px 100px;
             text-align: left;
             text-decoration: none;
         }
         body {
+            background-color: grey;
             margin: 0 auto;
             background-position:center;
             background-size: contain;
@@ -30,17 +31,54 @@
             position: sticky;
             top: 0;
             background-color: black;
-            padding:10px 0px 10px 0px;
+            padding:0px 0px 0px 84px;
             color:white;
-            margin: 0 auto;
-            overflow: hidden;
         }
         .menu a {
+            display:inline-block;
+            font-size: 20px;
             color: white;
             text-align: center;
-            padding: 14px 16px;
+            padding: 10px 16px;
             text-decoration: none;
+        }
+        .dropdown {
+            display:inline-block;
+        }
+        .dropdown .dropbtn {
             font-size: 20px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 10px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+        .menu a:hover, .dropdown:hover .dropbtn {
+            background-color: #595959;
+        }
+        .dropdown-content {
+            display: none;
+            position:absolute;
+            background-color: black;
+            width: fit-content;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            float: none;
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown-content a:hover {
+            background-color: #909090;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block ;
         }
         footer {
             width: 100%;
@@ -48,14 +86,22 @@
             background-color: black;
             color: white;
             position: fixed;
-	    padding:10px 0px 10px 0px;
+	          padding:10px 0px 10px 0px;
             text-align:center;
             font-size:17px;
             font-weight:bold;
         }
         .body_sec {
-            margin-left:20px;
+            background-color: white;
+            margin-left:180px;
+            margin-right:180px;
+            padding-top:40px;
+            padding-right:20px;
+            padding-left:20px;
+            padding-bottom:60px;
+            font-size:17px;
         }
+
     </style>
 </head>
 
@@ -70,15 +116,24 @@
     <!-- Menu Navigation Bar -->
     <div class="menu">
         <a href="https://govindramesh.github.io">HOME</a>
-        <a href="https://govindramesh.github.io/PD-3DCNN/">PD-3DCNN</a>
+        <div class="dropdown">
+            <a class="dropbtn">PD-3DCNN</a>
+            <div class="dropdown-content">
+                <a target="_blank" rel="noopener noreferrer" href="Research Paper.pdf">Research Paper</a>
+                <a href="https://govindramesh.github.io/PD-3DCNN/">3D CNN Tutorial</a>
+            </div>
+        </div>
         <a href="https://govindramesh.github.io/PoliceBrutality/">Police Brutality</a>
     </div>
 
     <!-- Body section -->
     <div class = "body_sec">
-        <section id="Content">
-            <h3>Content section</h3>
-        </section>
+      <section id="Contents">
+           <p><br><span style="font-size:18px; font-weight:bold;">Sections:</span>
+           <br><a href="#sec1">What is a Convolutional Neural Network?</a>
+           <br><a style="" href="#sec2">Convolutional Neural Network Architecture</a>
+           <br></p>
+      </section>
     </div>
 
     <!-- Footer Section -->
